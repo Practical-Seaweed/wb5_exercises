@@ -14,7 +14,7 @@ let sortNumbersDesc = (a, b) => {
     return b - a
 }
 
-// [ where the value your sorting on has a key of value ]
+//where the value your sorting on has a key of value
 let sortNumbersInArrayOfObjects = (a, b) => {
     return a.value - b.value
 }
@@ -34,8 +34,8 @@ console.log(items.sort(sortNumbersInArrayOfObjects))
 
 
 let sortyByStringInObject = (a, b) => {
-    const nameA = a.name.toUpperCase(); // [ ignore upper and lowercase ]
-    const nameB = b.name.toUpperCase(); // [ ignore upper and lowercase ]
+    const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.name.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
         return -1;
     }
@@ -64,8 +64,8 @@ let cart = [
 ];
 
 console.log(cart.sort((a, b) => {
-    const nameA = a.product.toUpperCase(); // [ ignore upper and lowercase ]
-    const nameB = b.product.toUpperCase(); // [ ignore upper and lowercase ]
+    const nameA = a.product.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.product.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
         return -1;
     }
@@ -73,7 +73,7 @@ console.log(cart.sort((a, b) => {
         return 1;
     }
 
-    // [ names must be equal ]
+    // names must be equal
     return 0;
 }))
 
