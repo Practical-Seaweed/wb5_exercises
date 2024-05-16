@@ -43,3 +43,5 @@ menu[meal].forEach( (menuItem) => {
     console.log(`${menuItem.item} : ${menuItem.price}`)
 
 } )
+
+console.log(menu[0][0])
