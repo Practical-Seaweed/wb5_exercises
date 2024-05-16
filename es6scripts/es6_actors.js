@@ -82,17 +82,32 @@ console.log("------------------------------");
 
 //                                        [ eric solution for the films that start with A ]
 
+// [ find all the actors who have films that start with the letter A 
+//  loop over all the actors in the academyMembers array using a filter. ]
 let theAfilms = academyMembers.filter( (member) => {
 
-    for(let i = 0; i < member.films.length; i++) {
+    // [ looping over all the films for each actor (member) ]
+    // for(let i = 0; i < member.films.length; i++) {
 
-        if(member.films[i].indexOf("A") === 0){
-            return true;
-        }
-        return false;
+    //     // [ do any of the films start with A ]
+    //     if(member.films[i].indexOf("A") === 0){
+    //         return true;
+    //     }
+    //     return false;
 
-    }
+    // }
+    // [ this is from ChatGPT ]
+    // [ slick way of doing this with .some and .startWith ]
+    return member.films.some((film) => {
+        return film.startsWith("A");
+        });
+
+
+
+
+
 }  )
+// [ display the members that have a film starting with A ]
 console.log(theAfilms);
 // [ but the one below is better ]
 theAfilms.forEach(movieA => console.log(`${movieA.name} has films starting with "A"`))
